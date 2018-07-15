@@ -1,5 +1,6 @@
 body {
   border: 1px solid #2d3c49;
+  min-width: 300px;
 }
 
 figure, img {
@@ -7,41 +8,29 @@ figure, img {
 }
 
 .container {
+  width:100%;
+  max-width:1200px;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto;
-  border: 20px solid transparent;
-}
-
-.box {
-  flex: 0 1 auto;
-  width: 100%;
-  margin: auto;
+  justify-content:center;
+  align-items:stretch;
+  margin:auto;
 }
 
 .header-container {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
-  margin: 15px 0;
+  justify-content:space-between;
 }
 
 .header-box {
-  flex: 0 1 auto;
-  max-width: 60%;
-}
-
-.text-container {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-end;
+  max-width: 50%;
 }
 
 .text-box {
-  flex: 0 1 auto;
-  margin: auto;
+  margin:auto;
+  max-width: 100%;
+  text-align: left;
 }
 
 .main-container {
@@ -51,22 +40,8 @@ figure, img {
 }
 
 .main-box {
-  flex: 1 1 auto;
   width: 100%;
-  margin: 20px auto;
-}
-
-@media screen and (max-width: 899px) {
-  .main-box#tourdefrance {
-    max-height: 600px;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .main-box#tourdefrance {
-    max-width: 1000px;
-    max-height: 600px;
-  }
+  margin: auto;
 }
 
 .photo-container {
@@ -81,50 +56,22 @@ figure, img {
   margin: 5px auto;
 }
 
-@media screen and (max-width: 599px) {
-  .box#featured-work {
-    margin: 15% 0;
-  }
-
-  .photo-box {
-    flex: 0 1 auto;
-    margin: 5px auto;
-    width: 100%;
-    max-width: 400px;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .box#featured-work {
-    margin: 8% 0;
-  }
-
-  .photo-box {
-    flex: 0 1 auto;
-    margin: 5px auto;
-    width: 100%;
-    max-width: 250px;
-  }
-}
-
 #header {
   width: 100%;
 }
 
 #surname-name {
   font-family: "Federo";
-  font-size: 40px;
-  line-height: 1.75em;
+  font-size: 32px;
   text-align: right;
-  margin: 0;
+  margin: auto;
 }
 
 #title {
   font-family: "Federo";
-  font-size: 18px;
-  line-height: 0.75em;
+  font-size: 14px;
   text-align: right;
-  margin: 0;
+  margin: auto;
 }
 
 #logo {
@@ -139,26 +86,89 @@ figure, img {
   border: none;
   height: 5px;
   background-color: #7d97ad;
-  margin: 15px 0;
+  margin: 15px, 0;
   width: 100%
 }
 
 #featured-work h3 {
   font-family: "Federo";
-  font-size: 36px;
+  font-size: 28px;
   color: #7d97ad;
-  text-align: left;
-  margin-top: 1.5em;
-  margin-bottom: 0.75em;
-  margin-left: 2em;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0.5em;
 }
 
 #featured-work figure {
   font-family: "Federo";
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
 }
 
 #featured-work figure img {
   padding-bottom: 10px;
+}
+
+@media screen and (min-width: 900px) {
+  .main-box#tourdefrance {
+    max-width: 1000px;
+    max-height: 600px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #featured-work {
+    margin: 8% 0;
+  }
+  .photo-box {
+    flex: 0 1 auto;
+    margin: 5px auto;
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  #featured-work {
+    margin: 15% 0;
+  }
+  .photo-box {
+    margin: 10px auto;
+    width: 100%;
+    max-width: 400px;
+  }
+  #surname-name {
+    font-family: "Federo";
+    font-size: 24px;
+    text-align: right;
+    margin: auto;
+  }
+  #featured-work figure {
+    font-family: "Federo";
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  #featured-work {
+    margin: 25% 0;
+  }
+  .photo-box {
+    margin: 15px auto;
+    width: 100%;
+    max-width: 300px;
+  }
+  #surname-name {
+    font-family: "Federo";
+    font-size: 18px;
+    text-align: right;
+    margin: auto;
+  }
+  #featured-work figure {
+    font-family: "Federo";
+    font-size: 14px;
+    text-align: center;
+  }
 }
